@@ -1,0 +1,7 @@
+# Test data for travel destination search
+searchData:
+  destinationInput: Bangkok
+  destinationSelection: Bangkok (All airports)
+  # destinationInput: Penang
+  # destinationSelection: Penang (All airports)
+  
