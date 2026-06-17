@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { parse } from 'yaml';
 
-//Read and parse the YAML data outside the test block
+// Read and parse the YAML data outside the test block
 const filePath = path.resolve(__dirname, '../data/testData.yaml');
 const fileContent = fs.readFileSync(filePath, 'utf8');
 const testData = parse(fileContent);
