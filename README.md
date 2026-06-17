@@ -23,7 +23,7 @@ Before running the tests, ensure you have the following installed on your machin
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/faqehi/playwright_june2026.git
    cd playwright_june2026
    ```
 
