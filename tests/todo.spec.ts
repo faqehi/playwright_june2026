@@ -12,7 +12,7 @@ test('hasInsurancePlan', async ({ page }) => {
   // Navigate to the AirAsia homepage
   await page.goto('https://www.airasia.com/en/gb');
 
-  // Choosing destination via data-driven config
+  // Choosing departure via data-driven config
   const { departureLocationInput, departureLocationSelection } = testData.searchData;
   await page.getByPlaceholder('From').click();
   await page.getByPlaceholder('From').fill(departureLocationInput);
@@ -114,7 +114,7 @@ test('hasInsurancePlan', async ({ page }) => {
     return match ? parseFloat(match[1]) : 0; // Fixed to parse the captured group [1]
   };
 
-  // Extract initial prices concurrently
+  // Extract initial prices concurrently, to be used later
   const baseFareRegex = /Base fare\s*MYR\s*\d+\.\d{2}/;
   const addOnsRegex = /Add-ons\s*MYR\s*\d+\.\d{2}/;
 
