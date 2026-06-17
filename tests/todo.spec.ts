@@ -49,11 +49,11 @@ test('hasInsurancePlan', async ({ page }) => {
   await confirmButton.click();
   
   //Choosing destination via data-driven config
-  const { destinationInput, destinationSelection } = testData.searchData;
+  const { destinationLocationInput, destinationLocationSelection } = testData.searchData;
   await page.getByPlaceholder('To').click();
-  await page.getByPlaceholder('To').fill(destinationInput);
+  await page.getByPlaceholder('To').fill(destinationLocationInput);
   await page.keyboard.press('ArrowDown'); 
-  await page.getByText(destinationSelection).click();
+  await page.getByText(destinationLocationSelection).click();
 
   //Close the Calendar popup
   const closeCalendar: Locator = page.locator('div[class*="Calendar__CloseCalendar"]');
