@@ -54,8 +54,6 @@ test('hasInsurancePlan', async ({ page }) => {
 
   //Validate and search for flights
   await page.getByLabel('Search Flights button.').click();
-  //Search for flights 
-  //await page.locator('#home_Search').click({ force: true });
 
   //Selecting first flight timeslot
   const flightOptions = page.getByTestId('price-select-pressable');
