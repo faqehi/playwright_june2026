@@ -12,6 +12,13 @@ test('hasInsurancePlan', async ({ page }) => {
   //Navigate to the AirAsia homepage
   await page.goto('https://www.airasia.com/en/gb');
 
+  //Choosing destination via data-driven config
+  const { departureLocationInput, departureLocationSelection } = testData.searchData;
+  await page.getByPlaceholder('From').click();
+  await page.getByPlaceholder('To').fill(departureLocationInput);
+  await page.keyboard.press('ArrowDown'); 
+  await page.getByText(departureLocationSelection).click();
+  
   //Navigate to book one way ticket
   const dropdownTrigger: Locator = page.locator('div[class*="TripTypeSelector__InputLabelContainer"]');
   await dropdownTrigger.click();
