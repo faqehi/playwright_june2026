@@ -1,7 +1,9 @@
 # Test data for travel destination search
 searchData:
-  destinationInput: Bangkok
-  destinationSelection: Bangkok (All airports)
+  destinationLocationInput: Bangkok
+  destinationLocationSelection: Bangkok (All airports)
   # destinationInput: Penang
   # destinationSelection: Penang (All airports)
+  departureLocationInput: Kuala Lumpur
+  departureLocationSelection: Kuala Lumpur (All airports)
   
