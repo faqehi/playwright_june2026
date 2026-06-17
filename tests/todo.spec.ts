@@ -15,7 +15,7 @@ test('hasInsurancePlan', async ({ page }) => {
   // Choosing destination via data-driven config
   const { departureLocationInput, departureLocationSelection } = testData.searchData;
   await page.getByPlaceholder('From').click();
-  await page.getByPlaceholder('To').fill(departureLocationInput);
+  await page.getByPlaceholder('From').fill(departureLocationInput);
   await page.keyboard.press('ArrowDown'); 
   await page.getByText(departureLocationSelection).click();
   
