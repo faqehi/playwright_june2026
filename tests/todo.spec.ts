@@ -57,7 +57,7 @@ test('hasInsurancePlan', async ({ page }) => {
   // Close the Calendar popup
   await page.locator('div[class*="Calendar__CloseCalendar"]').click();
 
-  // Validate and search for flights
+  // User search for flights
   await page.getByLabel('Search Flights button.').click();
 
   // Selecting first flight timeslot
