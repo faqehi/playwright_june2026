@@ -20,8 +20,7 @@ test('hasInsurancePlan', async ({ page }) => {
   await page.getByText(departureLocationSelection).click();
   
   // Navigate to book one way ticket
-  const dropdownTrigger: Locator = page.locator('div[class*="TripTypeSelector__InputLabelContainer"]');
-  await dropdownTrigger.click();
+  await page.locator('div[class*="TripTypeSelector__InputLabelContainer"]').click();
   await page.getByText('One-way').click({ force: true });
 
   // Choosing flight date
@@ -43,9 +42,9 @@ test('hasInsurancePlan', async ({ page }) => {
   await dateCell.click();
 
   // Click confirm inside the calendar
-  const confirmButton: Locator = page
-    .locator('div[class*="calendarfooter__FooterButtonItem"]')
-    .filter({ hasText: /confirm/i });
+  const confirmButton = page
+  .locator('div[class*="calendarfooter__FooterButtonItem"]')
+  .filter({ hasText: /confirm/i });
   await confirmButton.click();
   
   // Choosing destination via data-driven config
@@ -56,8 +55,7 @@ test('hasInsurancePlan', async ({ page }) => {
   await page.getByText(destinationLocationSelection).click();
 
   // Close the Calendar popup
-  const closeCalendar: Locator = page.locator('div[class*="Calendar__CloseCalendar"]');
-  await closeCalendar.click();
+  await page.locator('div[class*="Calendar__CloseCalendar"]').click();
 
   // Validate and search for flights
   await page.getByLabel('Search Flights button.').click();
