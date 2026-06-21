@@ -1,0 +1,29 @@
+{
+  "activeEnvironment": "test",
+  "environments": {
+    "test": "https://www.airasia.com/en/gb",
+    "uat": "https://www.airasia.com/en/gb",
+    "prod": "https://www.airasia.com/en/gb"
+  },
+  "validSearch": {
+    "departureLocationInput": "Kuala Lumpur",
+    "departureLocationSelection": "Kuala Lumpur International Airport (KUL)",
+    "destinationLocationInput": "Bangkok",
+    "destinationLocationSelection": "Bangkok (All airports)",
+    "daysFromNow": 21
+  },
+  "alternativeSearch": {
+    "departureLocationInput": "Kuala Lumpur",
+    "departureLocationSelection": "Kuala Lumpur International Airport (KUL)",
+    "destinationLocationInput": "Penang",
+    "destinationLocationSelection": "Penang (All airports)",
+    "daysFromNow": 21
+  },
+  "passengerInfo": {
+    "firstName": "Mike",
+    "lastName": "Ken",
+    "dob": "12/12/1990",
+    "email": "mikeken90@gmail.com",
+    "mobile": "017-505 5445"
+  }
+}
