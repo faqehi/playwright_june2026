@@ -21,5 +21,5 @@ export class FlightSelectionPage {
     await expect(this.loginDialog).toBeVisible();
     await expect(this.loginDialog.getByText(/sign up/i)).toBeVisible();
     await this.continueAsGuestLink.click();
-  }     
+  }
 }

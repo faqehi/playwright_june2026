@@ -41,5 +41,4 @@ test('TC01: Verify insurance plan price updates dynamically during checkout', as
     expect(fallbackBasePrice).toBeGreaterThan(0);
     expect(fallbackAddOnsPrice).toBeGreaterThan(0);
   }
-
 });

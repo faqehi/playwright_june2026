@@ -16,7 +16,6 @@ export class FlightSearchPage {
         this.toInput = page.getByPlaceholder('To');
         this.tripTypeDropdown = page.locator('div[class*="TripTypeSelector__InputLabelContainer"]');
         this.datePickerInput = page.getByRole('textbox', { name: /dd\/mm\/yyyy/i });
-
         this.calendarConfirmButton = page.locator('div[class*="calendarfooter__FooterButtonItem"]').filter({ hasText: /confirm/i });
         this.closeCalendarButton = page.locator('div[class*="Calendar__CloseCalendar"]');
         this.searchFlightsButton = page.getByLabel('Search Flights button.');
@@ -28,10 +27,7 @@ export class FlightSearchPage {
         toInput: string,
         toSelection: string
     ): Promise<void> {
-        // Execute departure workflow
         await this.selectDeparture(fromInput, fromSelection);
-
-        // Execute destination workflow
         await this.selectDestination(toInput, toSelection);
     }
 
@@ -82,6 +78,4 @@ export class FlightSearchPage {
     async clickSearch(): Promise<void> {
         await this.searchFlightsButton.click();
     }
-
-
 }
